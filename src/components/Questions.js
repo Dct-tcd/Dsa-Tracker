@@ -95,7 +95,7 @@ qq.map((ele)=>{
                 return (          
     <tr className = { checkID(ele.ID)==true?"bg-green-400":ele.ID%2===0?"bg-fuchsia-100":"none"  }>
                     <td  className=' text-md  text-sky-700 font-medium   border-2 p-3 w-10'>{ele.ID}</td>
-                    <td  className='text-md text-left text-sky-700 font-medium   border-2 p-3'>{ele.Q}</td>
+                    <td  className='text-md text-left text-sky-700 font-medium   border-2 p-3'><Link target="_blank" to={ele.link}>{ele.Q}</Link></td>
                     <td  className='text-md  text-sky-700 font-medium text-center  border-2 w-36'>
                         {
         checkID(ele.ID)===false ? <img className='w-5 h-5' src="https://th.bing.com/th/id/OIP.2Ef1V0Yr3Lv_CZLcXBBt3gHaHa?pid=ImgDet&rs=1"></img> :
