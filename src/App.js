@@ -87,24 +87,24 @@ function App() {
       done: "not",
     },
     {
-      ID: "10",
+      ID: "+10",
       Q: "Program to generate Pascal’s Triangle",
       status: "Incomplete",
       done: "not",
     },
     {
-      ID: "11",
+      ID: "+11",
       Q: "Next_permutation : find next lexicographically greater permutation",
       status: "Incomplete",
       done: "not",
     },
     {
-      ID: "12",
+      ID: "+12",
       Q: "Kadane’s Algorithm : Maximum Subarray Sum in an Array",
       done: "not",
     },
     {
-      ID: "13",
+      ID: "+13",
       Q: "Sort an array of 0s, 1s and 2s",
       status: "Incomplete",
       done: "not",

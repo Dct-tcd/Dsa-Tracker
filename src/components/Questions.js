@@ -12,9 +12,16 @@ export default function Questions({no,name,qlist,Checked,setChecked,qstate,setqs
     // localStorage.setItem('qstate', "");
     let item1=[],item2=[];
 
+    // for(let i=0;i<strs.length;i++)
+    // {
+    //    if (strs[i]!=','&&strs[i]!='/'&&strs[i]!='"'&&strs[i]!='['&&strs[i]!=']'&&(strs[i]<'a'||strs[i]>'z')) item2.push(strs[i]);
+    // }
     for(let i=0;i<strs.length;i++)
     {
-       if (strs[i]!=','&&strs[i]!='/'&&strs[i]!='"'&&strs[i]!='['&&strs[i]!=']'&&(strs[i]<'a'||strs[i]>'z')) item2.push(strs[i]);
+      // let iop = parseInt(strs[i] + strs[i+1]);
+
+       if (strs[i]==='+') { item2.push((strs[i] + strs[i+1] + strs[i+2])); i+=3;}
+else if (strs[i]!=',' && strs[i]!='/' &&  strs[i]!='"' && strs[i]!='['&&strs[i]!=']' && (strs[i]<'a'||strs[i]>'z')&& strs[i]!="\\" ){item2.push(strs[i]);}
     }
 
     setChecked(item2);

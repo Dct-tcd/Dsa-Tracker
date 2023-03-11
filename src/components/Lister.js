@@ -4,8 +4,6 @@ import Questions from "./Questions.js";
 import { Link } from 'react-router-dom';
 export default function Lister({Checked,Checked1,Checked2,Checked3,Checked4,Checked5,Checked6,Checked7,Checked8,Checked9,Checked10,Checked11}) {
   
-  // let op=3;
-  
   //   op += Checked!=null ? parseInt(Checked.length) : 0;
   //   op += Checked1!=null ? Checked1.length : 0;
   //   op += Checked2!=null ? Checked2.length : 0;
