@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Questions({name,qlist,Checked,setChecked,Checked1,setChecked1, qstate,setqstate}) {
-    
+export default function Questions({no,name,qlist,Checked,setChecked,qstate,setqstate}) {
 
-    
   useEffect(() => {
-   let strs=localStorage.getItem('Checked1');
+
+   let strs=localStorage.getItem('Checked'+`${no}`);
+   if (strs==null) return;
     // let strs=localStorage.getItem('qstate');
     // localStorage.setItem('Checked', "");
     // localStorage.setItem('qstate', "");
@@ -19,9 +19,7 @@ export default function Questions({name,qlist,Checked,setChecked,Checked1,setChe
 
     setChecked(item2);
     console.log(item2);
-    localStorage.setItem('Checked', JSON.stringify(item2));
-
-
+    localStorage.setItem('Checked'+`${no}`, JSON.stringify(item2));
     // localStorage.setItem('qstate', JSON.stringify(item2));
   }, []);
 
@@ -34,7 +32,7 @@ const handlechange = (id) => {
         const newList = Checked.filter((idt) => idt !== id);
         setChecked(newList);
 
-   localStorage.setItem('Checked', JSON.stringify(newList));
+   localStorage.setItem('Checked'+`${no}`, JSON.stringify(newList));
    localStorage.setItem('qstate', JSON.stringify(newList));
  
         // const newList1 = qstate.filter((idt) => idt !== id);
@@ -44,23 +42,26 @@ const handlechange = (id) => {
      else {
         // setqstate([...qstate,id]);
         setChecked([...Checked,id]);
-        localStorage.setItem('Checked', JSON.stringify(Checked+id));
- 
+        localStorage.setItem('Checked'+`${no}`, JSON.stringify(Checked+id));
      }   
+     
+// setChecked(Checked);
+
 }
+// console.log(Checked,'2');
 
 let checkID  = (ele) =>
  {
     if (Checked==null) return false;
-    // console.log(Checked);
-       for(let i=0;i<Checked.length;i++)
+   
+    for(let i=0;i<Checked.length;i++)
        {
           if (ele==Checked[i]) return true;
        }
        return false;
 }
     return (
-    <>
+    <div className='mb-20'>
     <div className='flex justify-center mt-24 ' >
         <img className='w-10 h-10' src="https://clipartcraft.com/images/transparent-emojis-sparkle-2.png"></img>
       <h1 className='text-4xl mb-3' >{name}  Problems</h1>
@@ -105,6 +106,6 @@ qq.map((ele)=>{
 }
 </table>
 </div>
-    </>
+    </div>
   )
 }
