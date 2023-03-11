@@ -25,7 +25,7 @@ export default function Lister({Checked,Checked1,Checked2,Checked3,Checked4,Chec
   return (
     <div>
     <h1 className="text-4xl mt-24  flex justify-center">
-  450 Dsa Questions
+  100 Dsa Questions
    </h1>
    <h3 className="text-4xl mt-5 text-purple-800  flex justify-center">
   Crack Product  based companies today
