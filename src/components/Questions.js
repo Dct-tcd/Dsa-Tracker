@@ -96,7 +96,7 @@ qq.map((ele)=>{
                         }
                         </td>
                     <td  className='text-md  text-sky-700 font-medium   border-2 p-3 w-20'>
-<input   type="checkbox"  onChange={()=>{handlechange(ele.ID)}} className={`${checkID(ele.ID)===true?"checked":"unchecked"}`}  />
+<input   type="checkbox"  onChange={()=>{handlechange(ele.ID)}} checked={checkID(ele.ID)}/>
                       </td>
                   </tr>
                 )               
