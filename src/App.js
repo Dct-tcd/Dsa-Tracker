@@ -7,7 +7,7 @@ import React from "react";
 function App() {
   // const [qstate, setqstate] = useState([]);
 
-  const [Checked, setChecked] = useState([]);
+  const [Checked12, setChecked12] = useState([]);
   const [Checked1, setChecked1] = useState([]);
   const [Checked2, setChecked2] = useState([]);
   const [Checked3, setChecked3] = useState([]);
@@ -20,8 +20,17 @@ function App() {
   const [Checked10, setChecked10] = useState([]);
   const [Checked11, setChecked11] = useState([]);
 
-  const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
+const [progress, setprogress] = useState(0);
+  
+const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
 
+  
+  // useEffect(() => {
+  //   setprogress(((qstate)))
+
+  // }, [Checked12 , Checked1 , Checked2 , Checked3 , Checked4 , Checked5 , Checked6 , Checked7 , Checked8 , Checked9 , Checked10 , Checked11])
+  
+  
   useEffect(() => {
     localStorage.setItem("qstate", qstate);
   }, [qstate]);
@@ -660,7 +669,9 @@ function App() {
             path=""
             element={
               <Lister
-                Checked={Checked}
+                setprogress={setprogress}
+                progress={progress}
+                Checked12={Checked12}
                 Checked1={Checked1}
                 Checked2={Checked2}
                 Checked3={Checked3}
@@ -676,9 +687,9 @@ function App() {
             path="/Array"
             element={
               <Questions
-                Checked={Checked}
-                no={""}
-                setChecked={setChecked}
+                Checked={Checked12}
+                no={"12"}
+                setChecked={setChecked12}
                 qlist={arrayq}
                 name="Array"
               />
