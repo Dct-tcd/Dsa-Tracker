@@ -70,7 +70,7 @@ let checkID  = (ele) =>
     return (
     <div className='mb-20'>
     <div className='flex justify-center mt-24 ' >
-        <img className='w-10 h-10' src="https://clipartcraft.com/images/transparent-emojis-sparkle-2.png"></img>
+        <img className='w-10 h-10' src="Sparkle.png"></img>
       <h1 className='text-4xl mb-3' >{name}  Problems</h1>
     </div>
     <div className='flex justify-center mt-4'>
