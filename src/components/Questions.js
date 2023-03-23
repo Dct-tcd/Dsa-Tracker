@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Questions({no,name,qlist,Checked,setChecked,qstate,setqstate}) {
+export default function Questions({no,name,qlist,Checked,setChecked,qstate,setqstate,mode}) {
 
   useEffect(() => {
 
@@ -31,6 +31,9 @@ else if (strs[i]!=',' && strs[i]!='/' &&  strs[i]!='"' && strs[i]!='['&&strs[i]!
   }, []);
 
     let qq = qlist;
+    function refreshPage() {
+      window.location.reload();
+    }
 
 const handlechange = (id) => {
 
@@ -67,8 +70,14 @@ let checkID  = (ele) =>
        }
        return false;
 }
-    return (
-    <div className='mb-20'>
+// let classNamer ;
+// mode=="dark" ? classNamer = "bg-blue-100"  : classNamer = "mb-10";
+
+return (
+   <div className = {"mb-20"}>
+    
+    {console.log ( mode == "dark" ? " bg-cyan-500 " : null )}
+
     <div className='flex justify-center mt-24 ' >
         <img className='w-10 h-10' src="Sparkle.png"></img>
       <h1 className='text-4xl mb-3' >{name}  Problems</h1>

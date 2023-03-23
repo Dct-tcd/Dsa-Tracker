@@ -19,7 +19,8 @@ export default function Lister({
   Checked10,
   Checked11,
   progress,
-  setprogress
+  setprogress,
+  mode
 }) {
 
   let op=0;
@@ -45,7 +46,7 @@ op=0;
 
   // console.log(op,"op");
   return (
-    <div>
+    <div >
       <h1 className="text-4xl mt-24  flex justify-center">100 Dsa Questions</h1>
       <h3 className="text-4xl mt-5 text-purple-800  flex justify-center">
         Crack Product based companies today

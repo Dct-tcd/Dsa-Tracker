@@ -1,12 +1,14 @@
 import "./App.css";
 import Lister from "./components/Lister";
 import Questions from "./components/Questions";
+import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import React from "react";
 function App() {
-  // const [qstate, setqstate] = useState([]);
 
+  const [mode, setmode] = useState("light")
+    
   const [Checked12, setChecked12] = useState([]);
   const [Checked1, setChecked1] = useState([]);
   const [Checked2, setChecked2] = useState([]);
@@ -24,11 +26,7 @@ const [progress, setprogress] = useState(0);
   
 const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
 
-  
-  // useEffect(() => {
-  //   setprogress(((qstate)))
 
-  // }, [Checked12 , Checked1 , Checked2 , Checked3 , Checked4 , Checked5 , Checked6 , Checked7 , Checked8 , Checked9 , Checked10 , Checked11])
   
   
   useEffect(() => {
@@ -661,9 +659,11 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
   ];
 
   return (
-    <>
+    <> 
+   
       <Router>
-        <Routes>
+        <Navbar mode={mode} setmode={setmode}/>
+        <Routes> 
           <Route
             exact
             path=""
@@ -678,6 +678,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked4={Checked4}
                 Checked5={Checked5}
                 name="Array"
+                mode={mode}
               />
             }
           ></Route>
@@ -690,6 +691,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked12}
                 no={"12"}
                 setChecked={setChecked12}
+                mode={mode}
                 qlist={arrayq}
                 name="Array"
               />
@@ -704,6 +706,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked1}
                 no={"1"}
                 setChecked={setChecked1}
+                mode={mode}
                 qlist={greedyq}
                 name="Greedy"
               />
@@ -718,6 +721,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked2}
                 no={"2"}
                 setChecked={setChecked2}
+                mode={mode}
                 qlist={dpq}
                 name="Dynamic Programming"
               />
@@ -732,6 +736,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked3}
                 no={"3"}
                 setChecked={setChecked3}
+                mode={mode}
                 qlist={Bsq}
                 name="Binary Search"
               />
@@ -746,6 +751,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked4}
                 no={"4"}
                 setChecked={setChecked4}
+                mode={mode}
                 qlist={heapq}
                 name="Heap"
               />
@@ -760,6 +766,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked5}
                 no={"5"}
                 setChecked={setChecked5}
+                mode={mode}
                 qlist={recursionq}
                 name="Recursion"
               />
@@ -774,6 +781,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked6}
                 no={"6"}
                 setChecked={setChecked6}
+                mode={mode}
                 qlist={llq}
                 name="Linked List"
               />
@@ -788,6 +796,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked7}
                 no={"7"}
                 setChecked={setChecked7}
+                mode={mode}
                 qlist={Btq}
                 name="Binary Tree"
               />
@@ -802,6 +811,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked8}
                 no={"8"}
                 setChecked={setChecked8}
+                mode={mode}
                 qlist={Bstq}
                 name="Binary Search Tree"
               />
@@ -816,6 +826,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked9}
                 no={"9"}
                 setChecked={setChecked9}
+                mode={mode}
                 qlist={Sqtq}
                 name="Stack and Queue"
               />
@@ -830,6 +841,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked10}
                 no={"10"}
                 setChecked={setChecked10}
+                mode={mode}
                 qlist={Backtrackingq}
                 name="Backtracking"
               />
@@ -844,6 +856,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked={Checked11}
                 no={"11"}
                 setChecked={setChecked11}
+                mode={mode}
                 qlist={Graphq}
                 name="Graphs"
               />
