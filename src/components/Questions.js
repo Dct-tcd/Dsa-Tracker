@@ -21,11 +21,11 @@ export default function Questions({no,name,qlist,Checked,setChecked,qstate,setqs
       // let iop = parseInt(strs[i] + strs[i+1]);
 
        if (strs[i]==='+') { item2.push((strs[i] + strs[i+1] + strs[i+2])); i+=3;}
-else if (strs[i]!=',' && strs[i]!='/' &&  strs[i]!='"' && strs[i]!='['&&strs[i]!=']' && (strs[i]<'a'||strs[i]>'z')&& strs[i]!="\\"&& strs[i]!='+' ) {item2.push(strs[i]);}
+else if (strs[i]!=',' && strs[i]!='/' &&  strs[i]!='"' && strs[i]!='['&&strs[i]!=']' && (strs[i]<'a'||strs[i]>'z')&& strs[i]!="\\"&& strs[i]!='+' && strs[i]!='0' ) {item2.push(strs[i]);}
     }
 
     setChecked(item2);
-    // console.log(item2);
+    console.log(item2);
     localStorage.setItem('Checked'+`${no}`, JSON.stringify(item2));
     // localStorage.setItem('qstate', JSON.stringify(item2));
   }, []);

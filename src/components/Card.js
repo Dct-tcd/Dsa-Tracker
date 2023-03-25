@@ -23,7 +23,7 @@ if (op!=null)
   }
   let ans = op!=null? kk :0;
     
-    console.log(op,' 1p ',ans);
+    // console.log(op,' 1p ',ans);
     
 
 

@@ -4,6 +4,7 @@ import Questions from "./Questions.js";
 import { Link } from "react-router-dom";
 import TopLoader from "react-top-loader";
 import { useEffect } from "react";
+import styles from "./Lister.css"
 
 export default function Lister({
   Checked1,
@@ -23,22 +24,45 @@ export default function Lister({
   
 }) {
 
-  let op=0;
+ 
+
+  // let op=0;
 // useEffect(() => {
-op=0;  
-  op += Checked1!=null ? Checked1.length : 0;
-  op += Checked2!=null ? Checked2.length : 0;
-  op += Checked3!=null ? Checked3.length : 0;
-  op += Checked4!=null ? Checked4.length : 0;
-  op += Checked5!=null ? Checked5.length : 0;
-  op += Checked6!=null ? Checked6.length : 0;
-  op += Checked7!=null ? Checked7.length : 0;
-  op += Checked8!=null ? Checked8.length : 0;
-  op += Checked9!=null ? Checked9.length : 0;
-  op += Checked10!=null ? Checked10.length : 0;
-  op += Checked11!=null ? Checked11.length : 0;
-  op += Checked12!=null ? Checked12.length : 0;
-  op += Checked13!=null ? Checked13.length : 0;
+// op=0;  
+let count=0;  
+for(let no=0;no<=12;no++)
+{
+let  op = JSON.parse(localStorage.getItem('Checked'+`${no}`));
+//  let ans=0;
+if (op!=null)
+  {
+    op  = [...new Set(op)];
+    
+    for(let i=0;i<op.length;i++)
+    {
+      // let iop = parseInt(strs[i] + strs[i+1]);
+
+      //  if (strs[i]==='+') { item2.push((strs[i] + strs[i+1] + strs[i+2])); i+=3;}
+ if ((op[i]!=',' && op[i]!='/' &&  op[i]!='"' && op[i]!='['&& op[i]!=']' && (op[i]<'a'|| op[i]>'z')&& op[i]!="\\"&& op[i]!='+') || op.length==3 ) {count++;}
+    }
+
+  }
+}
+  // let ans = op!=null? kk :0;
+    
+  // op += Checked1!=null ? Checked1.length : 0;
+  // op += Checked2!=null ? Checked2.length : 0;
+  // op += Checked3!=null ? Checked3.length : 0;
+  // op += Checked4!=null ? Checked4.length : 0;
+  // op += Checked5!=null ? Checked5.length : 0;
+  // op += Checked6!=null ? Checked6.length : 0;
+  // op += Checked7!=null ? Checked7.length : 0;
+  // op += Checked8!=null ? Checked8.length : 0;
+  // op += Checked9!=null ? Checked9.length : 0;
+  // op += Checked10!=null ? Checked10.length : 0;
+  // op += Checked11!=null ? Checked11.length : 0;
+  // op += Checked12!=null ? Checked12.length : 0;
+  // op += Checked13!=null ? Checked13.length : 0;
 
 //   setprogress(op);
 // }, [])
@@ -46,6 +70,30 @@ op=0;
   //  let total = 88 ;
 
   // console.log(op,"op");
+  const containerStyles = {
+    height: 20,
+    // width: '100%',
+    backgroundColor: "#e0e0de",
+    borderRadius: 10,
+    marginTop:50,
+    marginBottom:50,
+    marginLeft : 200,
+    marginRight : 200,
+}
+
+  const fillerStyles = {
+    height: '100%',
+    width: `${Math.round((count*100)/102)}%`,
+    backgroundColor: "#ff9933",
+    borderRadius: 'inherit',
+    textAlign: 'right'
+  }
+
+  const labelStyles = {
+    padding: 5,
+    color: 'white',
+    fontWeight: 'bold'
+  }
   return (
     <div >
       <h1 className="text-4xl mt-24  flex justify-center">100 Dsa Questions</h1>
@@ -64,6 +112,14 @@ op=0;
         </div>
         {progress}
       </div> */}
+
+<div  style={containerStyles}>
+      <div style={fillerStyles}>
+        <span style={labelStyles}>{`${count }% `}</span> 
+        {/* <span style={labelStyles}>Completed</span> */}
+ </div>
+</div>
+
 {/*        
        useEffect(() => {
     ans = op!=null?op.length:0;
