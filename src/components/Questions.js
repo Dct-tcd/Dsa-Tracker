@@ -25,7 +25,7 @@ else if (strs[i]!=',' && strs[i]!='/' &&  strs[i]!='"' && strs[i]!='['&&strs[i]!
     }
 
     setChecked(item2);
-    console.log(item2);
+    // console.log(item2);
     localStorage.setItem('Checked'+`${no}`, JSON.stringify(item2));
     // localStorage.setItem('qstate', JSON.stringify(item2));
   }, []);
@@ -70,13 +70,23 @@ let checkID  = (ele) =>
        }
        return false;
 }
+const handleID = (str) => {
+  
+ let ans =  str.split('');
+ ans.reverse();
+  ans.pop(); 
+  ans.reverse();
+  ans.join('');
+  
+  return ans;
+}
 // let classNamer ;
 // mode=="dark" ? classNamer = "bg-blue-100"  : classNamer = "mb-10";
 
 return (
    <div className = {"mb-20"}>
     
-    {console.log ( mode == "dark" ? " bg-cyan-500 " : null )}
+    {/* {console.log ( mode == "dark" ? " bg-cyan-500 " : null )} */}
 
     <div className='flex justify-center mt-24 ' >
         <img className='w-10 h-10' src="Sparkle.png"></img>
@@ -103,7 +113,11 @@ qq.map((ele)=>{
         {
                 return (          
     <tr className = { checkID(ele.ID)==true?"bg-green-400":ele.ID%2===0?"bg-fuchsia-100":"none"  }>
-                    <td  className=' text-md  text-sky-700 font-medium   border-2 p-3 w-10'>{ele.ID}</td>
+                    <td  className=' text-md  text-sky-700 font-medium   border-2 p-3 w-10'>
+                    
+                      { ele.ID[0]=='+'? handleID(ele.ID) : ele.ID }
+                    
+                    </td>
                     <td  className='text-md text-left text-sky-700 font-medium   border-2 p-3'><Link target="_blank" to={ele.link}>{ele.Q}</Link></td>
                     <td  className='text-md  text-sky-700 font-medium text-center  border-2 w-36'>
                         {

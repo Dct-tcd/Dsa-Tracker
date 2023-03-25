@@ -21,14 +21,10 @@ function App() {
   const [Checked9, setChecked9] = useState([]);
   const [Checked10, setChecked10] = useState([]);
   const [Checked11, setChecked11] = useState([]);
-
 const [progress, setprogress] = useState(0);
   
 const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
 
-
-  
-  
   useEffect(() => {
     localStorage.setItem("qstate", qstate);
   }, [qstate]);
@@ -127,6 +123,41 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
       ID: "+13",
       Q: "Sort an array of 0s, 1s and 2s",
       link: "https://leetcode.com/problems/sort-colors/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+14",
+      Q: "Grid Unique Paths",
+      link: "https://leetcode.com/problems/unique-paths/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+15",
+      Q: "Reverse Pairs",
+      link: "https://leetcode.com/problems/reverse-pairs/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+16",
+      Q: "Pow(x,n) : Find X raised to the power N",
+      link: "https://leetcode.com/problems/powx-n/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+17",
+      Q: "4 Sum problem",
+      link: "https://leetcode.com/problems/4sum/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+18",
+      Q: "Max consecutive Ones",
+      link: "https://leetcode.com/problems/max-consecutive-ones/",
       status: "Incomplete",
       done: "not",
     },

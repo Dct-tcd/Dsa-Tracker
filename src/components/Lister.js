@@ -43,9 +43,9 @@ op=0;
 
   // console.log(op,"op");
   return (
-    <div>
+    <div >
       <h1 className="text-4xl mt-24  flex justify-center">100 Dsa Questions</h1>
-      <h3 className="text-4xl mt-5 text-purple-800  flex justify-center">
+      <h3 className="text-4xl mt-3 text-purple-800 align-items-center  flex justify-center">
         Crack Product based companies today
       </h3>
 {/* <div className="flex justify-center ">
@@ -60,8 +60,8 @@ op=0;
         </div>
         {progress}
       </div> */}
-      <div className="flex flex-wrap p-16 m-12 mt-12  mb-12  ">
-        <Card qno={13} no={"12"} Checked={Checked12} name="Array" />
+      <div className="flex flex-wrap p-16 m-12 mt-12  mb-12 justify-center  ">
+        <Card qno={18} no={"12"} Checked={Checked12} name="Array" />
         <Card qno={5} no={"1"} Checked={Checked1} name="Greedy" />
         <Card qno={8} no={"2"} Checked={Checked2} name="Dynamic Programming" />
         <Card qno={7} no={"3"} Checked={Checked3} name="Binary search" />
