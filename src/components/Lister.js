@@ -72,13 +72,12 @@ if (op!=null)
   // console.log(op,"op");
   const containerStyles = {
     height: 20,
-    // width: '100%',
     backgroundColor: "#e0e0de",
     borderRadius: 10,
     marginTop:50,
     marginBottom:50,
-    marginLeft : 200,
-    marginRight : 200,
+    // marginLeft : 100,
+    // marginRight : 100,
 }
 
   const fillerStyles = {
@@ -97,7 +96,7 @@ if (op!=null)
   return (
     <div >
       <h1 className="text-4xl mt-24  flex justify-center">100 Dsa Questions</h1>
-      <h3 className="text-4xl mt-3 text-purple-800 align-items-center  flex justify-center">
+      <h3 className="text-4xl mt-3 text-purple-800 align-items-center text-center  flex justify-center">
         Crack Product based companies today
       </h3>
 {/* <div className="flex justify-center ">
@@ -113,7 +112,7 @@ if (op!=null)
         {progress}
       </div> */}
 
-<div  style={containerStyles}>
+<div className={"lg:ml-52 lg:mr-52 md:ml-52 md:mr-52 ml-24 mr-24 "} style={containerStyles}>
       <div style={fillerStyles}>
         <span style={labelStyles}>{`${count }% `}</span> 
         {/* <span style={labelStyles}>Completed</span> */}
