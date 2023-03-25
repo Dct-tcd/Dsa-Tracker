@@ -127,7 +127,7 @@ if (op!=null)
  }, [Checked1,Checked2,Checked3,Checked4,Checked1,Checked5,Checked6,Checked7,Checked8,Checked9,Checked10,Checked11,Checked12,Checked13,]) */}
  
  
-      <div className="flex flex-wrap p-16 m-12 mt-12  mb-12 justify-center  ">
+      <div className="flex flex-wrap lg:p-16 md:p-16  lg:m-12 md:m-12 sm:m-4 sm:max-w-sm- mt-12  mb-12 justify-center  ">
         <Card qno={25} no={"12"} ans={Checked12} Checked={Checked12} name="Array and String" />
         <Card qno={5} no={"1"} ans={Checked1}  Checked={Checked1} name="Greedy" />
         <Card qno={13} no={"2"} ans={Checked2} Checked={Checked2} name="Dynamic Programming" />
