@@ -18,9 +18,6 @@ export default function Lister({
   Checked9,
   Checked10,
   Checked11,
-  progress,
-  setprogress,
-  mode
 }) {
 
   let op=0;
