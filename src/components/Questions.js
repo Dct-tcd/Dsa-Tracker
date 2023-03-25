@@ -21,7 +21,7 @@ export default function Questions({no,name,qlist,Checked,setChecked,qstate,setqs
       // let iop = parseInt(strs[i] + strs[i+1]);
 
        if (strs[i]==='+') { item2.push((strs[i] + strs[i+1] + strs[i+2])); i+=3;}
-else if (strs[i]!=',' && strs[i]!='/' &&  strs[i]!='"' && strs[i]!='['&&strs[i]!=']' && (strs[i]<'a'||strs[i]>'z')&& strs[i]!="\\" ){item2.push(strs[i]);}
+else if (strs[i]!=',' && strs[i]!='/' &&  strs[i]!='"' && strs[i]!='['&&strs[i]!=']' && (strs[i]<'a'||strs[i]>'z')&& strs[i]!="\\"&& strs[i]!='+' ) {item2.push(strs[i]);}
     }
 
     setChecked(item2);
@@ -56,7 +56,7 @@ const handlechange = (id) => {
      }   
      
 // setChecked(Checked);
-
+// window.location.reload();
 }
 // console.log(Checked,'2');
 
@@ -70,6 +70,8 @@ let checkID  = (ele) =>
        }
        return false;
 }
+
+
 const handleID = (str) => {
   
  let ans =  str.split('');

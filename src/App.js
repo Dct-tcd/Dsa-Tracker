@@ -21,19 +21,20 @@ function App() {
   const [Checked9, setChecked9] = useState([]);
   const [Checked10, setChecked10] = useState([]);
   const [Checked11, setChecked11] = useState([]);
-const [progress, setprogress] = useState(0);
-  
-const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
+  const [progress, setprogress] = useState(0);
+  const [Checked13, setChecked13] = useState([]);
 
-  useEffect(() => {
-    localStorage.setItem("qstate", qstate);
-  }, [qstate]);
+// const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
 
-  const [qstate2, setqstate2] = useState(localStorage.getItem("qstate2"));
+//   useEffect(() => {
+//     localStorage.setItem("qstate", qstate);
+//   }, [qstate]);
 
-  useEffect(() => {
-    localStorage.setItem("qstate2", qstate2);
-  }, [qstate2]);
+//   const [qstate2, setqstate2] = useState(localStorage.getItem("qstate2"));
+
+//   useEffect(() => {
+//     localStorage.setItem("qstate2", qstate2);
+//   }, [qstate2]);
 
   const arrayq = [
     {
@@ -161,6 +162,57 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
       status: "Incomplete",
       done: "not",
     },
+    {
+      ID: "+19",
+      Q: "Reverse Words in a String", 
+      link:"https://leetcode.com/problems/reverse-words-in-a-string/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+20",
+      Q: "Longest Palindrome in a string", 
+      link:"https://leetcode.com/problems/longest-palindromic-substring/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+21",
+      Q: "Longest Common Prefix", 
+      link:"https://leetcode.com/problems/longest-common-prefix/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+22",
+      Q: "Minimum characters needed to be inserted in the beginning to make it palindromic", 
+      link:"https://www.codingninjas.com/codestudio/problems/893000?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+23",
+      Q: "Check for Anagrams", 
+      link:"https://leetcode.com/problems/valid-anagram/",
+      status: "Incomplete",
+      done: "not",
+    },
+    
+    {
+      ID: "+24",
+      Q: "Count and Say", 
+      link:"https://leetcode.com/problems/count-and-say/",
+      status: "Incomplete",
+      done: "not",
+    },
+    
+    {
+      ID: "+25",
+      Q: "Compare version numbers", 
+      link:"https://leetcode.com/problems/compare-version-numbers/",
+      status: "Incomplete",
+      done: "not",
+    },
   ];
 
   const greedyq = [
@@ -247,6 +299,41 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
       ID: "8",
       Q: "Minimum Path Sum In a Grid",
       link:"https://leetcode.com/problems/minimum-path-sum/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "9",
+      Q: "Longest Increasing Subsequence",
+      link:"https://leetcode.com/problems/longest-increasing-subsequence/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+10",
+      Q: "Maximum sum increasing subsequence",
+      link:"https://practice.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+11",
+      Q: "Matrix Chain Multiplication",
+      link:"https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+12",
+      Q: "Minimum sum path in the matrix, (count paths and similar type do, also backtrack to find the Minimum path)",
+      link:"https://leetcode.com/problems/minimum-path-sum/",
+      status: "Incomplete",
+      done: "not",
+    },
+    {
+      ID: "+13",
+      Q: "Maximum profit in Job scheduling",
+      link:"https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1",
       status: "Incomplete",
       done: "not",
     },
@@ -688,7 +775,6 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
       done: "not",
     },
   ];
-
   return (
     <> 
    
@@ -708,6 +794,14 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
                 Checked3={Checked3}
                 Checked4={Checked4}
                 Checked5={Checked5}
+                Checked6={Checked6}
+                Checked7={Checked7}
+                Checked8={Checked8}
+                Checked9={Checked9}
+                Checked10={Checked10}
+                Checked11={Checked11}
+                // Checked10={Checked5}
+                
                 name="Array"
                 mode={mode}
               />
@@ -716,7 +810,7 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
 
           <Route
             exact
-            path="/Array"
+            path="/Array and string"
             element={
               <Questions
                 Checked={Checked12}
@@ -893,6 +987,20 @@ const [qstate, setqstate] = useState(localStorage.getItem("qstate"));
               />
             }
           ></Route>
+           {/* <Route
+            exact
+            path="/String"
+            element={
+              <Questions
+                Checked={Checked13}
+                no={"13"}
+                setChecked={setChecked13}
+                mode={mode}
+                qlist={stringq}
+                name="String"
+              />
+            }
+          ></Route> */}
         </Routes>
       </Router>
     </>

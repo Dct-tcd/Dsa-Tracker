@@ -6,7 +6,6 @@ import TopLoader from "react-top-loader";
 import { useEffect } from "react";
 
 export default function Lister({
-  Checked12,
   Checked1,
   Checked2,
   Checked3,
@@ -18,12 +17,15 @@ export default function Lister({
   Checked9,
   Checked10,
   Checked11,
+  Checked12,
+  Checked13,
+
+  
 }) {
 
   let op=0;
 // useEffect(() => {
 op=0;  
-  op += Checked12!=null ? Checked12.length : 0;
   op += Checked1!=null ? Checked1.length : 0;
   op += Checked2!=null ? Checked2.length : 0;
   op += Checked3!=null ? Checked3.length : 0;
@@ -35,6 +37,8 @@ op=0;
   op += Checked9!=null ? Checked9.length : 0;
   op += Checked10!=null ? Checked10.length : 0;
   op += Checked11!=null ? Checked11.length : 0;
+  op += Checked12!=null ? Checked12.length : 0;
+  op += Checked13!=null ? Checked13.length : 0;
 
 //   setprogress(op);
 // }, [])
@@ -60,19 +64,27 @@ op=0;
         </div>
         {progress}
       </div> */}
+{/*        
+       useEffect(() => {
+    ans = op!=null?op.length:0;
+   
+ }, [Checked1,Checked2,Checked3,Checked4,Checked1,Checked5,Checked6,Checked7,Checked8,Checked9,Checked10,Checked11,Checked12,Checked13,]) */}
+ 
+ 
       <div className="flex flex-wrap p-16 m-12 mt-12  mb-12 justify-center  ">
-        <Card qno={18} no={"12"} Checked={Checked12} name="Array" />
-        <Card qno={5} no={"1"} Checked={Checked1} name="Greedy" />
-        <Card qno={8} no={"2"} Checked={Checked2} name="Dynamic Programming" />
-        <Card qno={7} no={"3"} Checked={Checked3} name="Binary search" />
-        <Card qno={5} no={"4"} Checked={Checked4} name="Heaps" />
-        <Card qno={6} no={"5"} Checked={Checked5} name="Recursion" />
-        <Card qno={8} no={"6"} Checked={Checked6} name="Linked List" />
-        <Card qno={8} no={"7"} Checked={Checked7} name="Binary Tree" />
-        <Card qno={6} no={"8"} Checked={Checked8} name="Binary Search Tree" />
-        <Card qno={7} no={"9"} Checked={Checked9} name="Stack and Queue" />
-        <Card qno={6} no={"10"} Checked={Checked10} name="Backtracking" />
-        <Card qno={6} no={"11"} Checked={Checked11} name="Graphs" />
+        <Card qno={25} no={"12"} ans={Checked12} Checked={Checked12} name="Array and String" />
+        <Card qno={5} no={"1"} ans={Checked1}  Checked={Checked1} name="Greedy" />
+        <Card qno={13} no={"2"} ans={Checked2} Checked={Checked2} name="Dynamic Programming" />
+        <Card qno={7} no={"3"} ans={Checked3}  Checked={Checked3} name="Binary search" />
+        <Card qno={5} no={"4"} ans={Checked12} Checked={Checked4} name="Heaps" />
+        <Card qno={6} no={"5"} ans={Checked12} Checked={Checked5} name="Recursion" />
+        <Card qno={8} no={"6"} ans={Checked12} Checked={Checked6} name="Linked List" />
+        <Card qno={8} no={"7"} ans={Checked12} Checked={Checked7} name="Binary Tree" />
+        <Card qno={6} no={"8"} ans={Checked12} Checked={Checked8} name="Binary Search Tree" />
+        <Card qno={7} no={"9"}  ans={Checked12} Checked={Checked9} name="Stack and Queue" />
+        <Card qno={6} no={"10"} ans={Checked12}  Checked={Checked10} name="Backtracking" />
+        <Card qno={6} no={"11"} ans={Checked12}  Checked={Checked11} name="Graphs" />
+        {/* <Card qno={7} no={"13"} Checked={Checked13} name="String" /> */}
       </div>
       <div className="mb-10">
         <div className="flex justify-center ">

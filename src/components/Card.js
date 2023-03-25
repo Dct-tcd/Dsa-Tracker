@@ -2,11 +2,26 @@ import React, { useState } from 'react'
 
 import { BrowserRouter as Router,Link, Routes, Route } from "react-router-dom";
 
-export default function Card({name,no,Checked,qno}) {
+export default function Card({name,no,qno}) {
  
   let  op = JSON.parse(localStorage.getItem('Checked'+`${no}`));
- 
-  let ans = op!=null?op.length:0;
+//  let ans=0;
+let kk=0;  
+if (op!=null)
+  
+  {
+    op  = [...new Set(op)];
+    
+    for(let i=0;i<op.length;i++)
+    {
+      // let iop = parseInt(strs[i] + strs[i+1]);
+
+      //  if (strs[i]==='+') { item2.push((strs[i] + strs[i+1] + strs[i+2])); i+=3;}
+ if ((op[i]!=',' && op[i]!='/' &&  op[i]!='"' && op[i]!='['&& op[i]!=']' && (op[i]<'a'|| op[i]>'z')&& op[i]!="\\"&& op[i]!='+') || op.length==3 ) {kk++;}
+    }
+
+  }
+  let ans = op!=null? kk :0;
     
     console.log(op,' 1p ',ans);
     
@@ -19,7 +34,7 @@ export default function Card({name,no,Checked,qno}) {
       <img className='w-6 h-6  mr-3 mt-0 align-top' src="https://pluspng.com/img-png/react-logo-png-js-logo-react-react-js-icon-512x512.png"></img>
       <div className=' '>
       <h2 className='text-xl text-slate-600 font-bold  mt-2'>{name}</h2>
-      <h4 className='text-bg font-bold text-zinc-700 mt-2'>Total Questions : {qno}</h4>
+      <h4 className='text-bg font-bold text-zinc-700 mt-2 mb-1'>Total Questions : {qno}</h4>
 
 {
  ans==0 ?  <h6 className=' text-orange-800 italic mt-2 font-sans '>Not Yet Started</h6> :   
