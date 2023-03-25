@@ -13,7 +13,7 @@ function Navbar({mode,setmode}) {
     <div>
       <div className=' flex justify-between  bg-green-600 '>
         <div 
-        className='text-gray-200 font-lg text-left   m-3  h-8  '>
+        className='text-gray-200 font-lg text-left hover:text-gray-200  m-3  h-8  '>
 
         {/* <Link className='pr-2 text-teal-600' to="/"> Topics </Link> */}
        {/* <Router>
