@@ -3,4 +3,5 @@ This App helps you to optitmise your preparation by  showing a progress bar for 
 
 This project is adapted from a curated list of data structure and algorithms (DSA) questions by Raj vikramaditya ( Striver ). The sheet is well known as Striver Sde sheet  , which helps you to build a strong fundamental  in coding and allows you to progress to a strong future  .
 
-Dsa Tracker for Dsa Cracker Sheet 
+Dsa Tracker for Dsa Cracker Sheet .
+Striver's  Sde sheet :: https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/ 
