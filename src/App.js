@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import React from "react";
+
 function App() {
 
   const [mode, setmode] = useState("light")
@@ -35,6 +36,23 @@ function App() {
 //   useEffect(() => {
 //     localStorage.setItem("qstate2", qstate2);
 //   }, [qstate2]);
+
+const [alert, setAlert] = useState(null);
+
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type,
+    });
+    setTimeout(() => {
+      setAlert(null);
+    }, 2000);
+  };
+
+  
+  const hotTipClicked = () => {
+    showAlert("Dark Mode has been enabled", "success");
+  }
 
   const arrayq = [
     {
@@ -779,7 +797,7 @@ function App() {
     <> 
    
       <Router>
-        <Navbar mode={mode} setmode={setmode}/>
+        <Navbar mode={mode} setmode={setmode} hotTipClicked={hotTipClicked}/>
         <Routes> 
           <Route
             exact
