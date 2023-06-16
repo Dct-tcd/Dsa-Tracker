@@ -25,7 +25,28 @@ if (op!=null)
     
     // console.log(op,' 1p ',ans);
     
-
+    const fillerStyles = {
+      height: '100%',
+      width: `${Math.round((ans*100)/qno)}%`,
+      backgroundColor: "#22C55E",
+      borderRadius: 'inherit',
+      // textAlign: 'right',
+      // marginLeft:"1%",
+    }
+    const containerStyles = {
+      height: 10,
+      backgroundColor: "#e0e0de",
+      borderRadius: 10,
+      marginTop:5,
+      // marginBottom:50,
+      // marginLeft : 100,
+      // marginRight : 100,
+  }
+    const labelStyles = {
+      padding: 5,
+      color: 'white',
+      fontWeight: 'bold'
+    }
 
   return (
     <Link to={name}>
@@ -41,14 +62,21 @@ if (op!=null)
  Math.round((ans*100)/qno)!=100 ?
     // {console.log(ans)
     <div>      <div className=' justify-between mt-2  text-center flex ' >
-      <h6 className=' rounded-xl  bg-green-300    pt-1 w-16  text-slate-700 text-xs  ' > STARTED </h6>
+      <h6 className=' rounded-xl  bg-green-300    pt-1 w-16  text-slate-700 text-xs text-center     ' > STARTED </h6>
       <img src="https://th.bing.com/th/id/R.15e3df2a05ac767df4359bf37707b781?rik=YoELJf68lvMxWQ&riu=http%3a%2f%2fs3.amazonaws.com%2fpix.iemoji.com%2fimages%2femoji%2fapple%2fios-11%2f256%2fman-technologist-light-skin-tone.png&ehk=uinI8ak5dKPQXLDnNbEcTr%2bSuymPLXBS%2bBPUBpPLgcI%3d&risl=&pid=ImgRaw&r=0" className='w-5 h-5'></img>
       <h6 className='  text-green-700    ' >{Math.round((ans*100)/qno)}  %</h6>
       </div>
-
-    <div className="h-2 rounded-lg  w-full mt-1 bg-green-300 ">
-        <div className="h-2 rounded-lg bg-green-500  w-2  "></div>
-      </div>
+      <div  style={containerStyles}>
+      <div style={fillerStyles}>
+        <span style={labelStyles}></span> 
+        {/* <span style={labelStyles}>Completed</span> */}
+ </div>
+</div>
+    {/* <div className="h-2 rounded-lg  w-full mt-1 bg-green-300 ">
+    <span style={labelStyles}></span>  */}
+        {/* <div className={"h-2 rounded-lg bg-green-500  w-"+`${ans+3}`}></div> */}
+        {/* {console.log(ans)} */}
+      {/* </div> */}
       </div> 
        :
        <div>
