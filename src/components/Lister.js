@@ -20,6 +20,8 @@ export default function Lister({
   Checked11,
   Checked12,
   Checked13,
+  count,
+  setcount,
 
   
 }) {
@@ -29,7 +31,7 @@ export default function Lister({
   // let op=0;
 // useEffect(() => {
 // op=0;  
-let count=0;  
+let counter=0;
 for(let no=0;no<=12;no++)
 {
 let  op = JSON.parse(localStorage.getItem('Checked'+`${no}`));
@@ -43,11 +45,12 @@ if (op!=null)
       // let iop = parseInt(strs[i] + strs[i+1]);
 
       //  if (strs[i]==='+') { item2.push((strs[i] + strs[i+1] + strs[i+2])); i+=3;}
- if ((op[i]!=',' && op[i]!='/' &&  op[i]!='"' && op[i]!='['&& op[i]!=']' && (op[i]<'a'|| op[i]>'z')&& op[i]!="\\"&& op[i]!='+') || op.length==3 ) {count++;}
+ if ((op[i]!=',' && op[i]!='/' &&  op[i]!='"' && op[i]!='['&& op[i]!=']' && (op[i]<'a'|| op[i]>'z')&& op[i]!="\\"&& op[i]!='+') || op.length==3 ) {counter++;}
     }
 
   }
 }
+setcount(counter);
   // let ans = op!=null? kk :0;
     
   // op += Checked1!=null ? Checked1.length : 0;
@@ -82,10 +85,11 @@ if (op!=null)
 
   const fillerStyles = {
     height: '100%',
-    width: `${Math.round((count*100)/102)}%`,
+    width: `${Math.round((count*100)/100)}%`,
     backgroundColor: "#ff9933",
     borderRadius: 'inherit',
-    textAlign: 'right'
+    textAlign: 'right',
+    // marginLeft:"1%",
   }
 
   const labelStyles = {
@@ -111,7 +115,7 @@ if (op!=null)
         </div>
         {progress}
       </div> */}
-
+{/* setcount(count); */}
 <div className={"lg:ml-52 lg:mr-52 md:ml-52 md:mr-52 ml-24 mr-24 "} style={containerStyles}>
       <div style={fillerStyles}>
         <span style={labelStyles}>{`${count }% `}</span> 
@@ -127,7 +131,7 @@ if (op!=null)
  
  
       <div className="flex flex-wrap lg:p-16 md:p-16  lg:m-12 md:m-12 sm:m-4 sm:max-w-sm- mt-12  mb-12 justify-center  ">
-        <Card qno={25} no={"12"} ans={Checked12} Checked={Checked12} name="Array and String" />
+        <Card qno={23} no={"12"} ans={Checked12} Checked={Checked12} name="Array and String" />
         <Card qno={5} no={"1"} ans={Checked1}  Checked={Checked1} name="Greedy" />
         <Card qno={13} no={"2"} ans={Checked2} Checked={Checked2} name="Dynamic Programming" />
         <Card qno={7} no={"3"} ans={Checked3}  Checked={Checked3} name="Binary search" />

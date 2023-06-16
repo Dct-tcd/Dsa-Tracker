@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import React from "react";
+import Completer from "./components/Completer";
 function App() {
 
   const [mode, setmode] = useState("light")
@@ -197,23 +198,7 @@ function App() {
       status: "Incomplete",
       done: "not",
     },
-    
-    {
-      ID: "+24",
-      Q: "Count and Say", 
-      link:"https://leetcode.com/problems/count-and-say/",
-      status: "Incomplete",
-      done: "not",
-    },
-    
-    {
-      ID: "+25",
-      Q: "Compare version numbers", 
-      link:"https://leetcode.com/problems/compare-version-numbers/",
-      status: "Incomplete",
-      done: "not",
-    },
-  ];
+   ];
 
   const greedyq = [
     { ID: "1", 
@@ -775,6 +760,10 @@ function App() {
       done: "not",
     },
   ];
+const [count, setcount] = useState(0);
+  
+
+
   return (
     <> 
    
@@ -785,6 +774,7 @@ function App() {
             exact
             path=""
             element={
+              count<=99?
               <Lister
                 setprogress={setprogress}
                 progress={progress}
@@ -801,10 +791,12 @@ function App() {
                 Checked10={Checked10}
                 Checked11={Checked11}
                 // Checked10={Checked5}
-                
+                count={count}
+                setcount={setcount}
                 name="Array"
                 mode={mode}
-              />
+              />:
+              <Completer/>
             }
           ></Route>
 

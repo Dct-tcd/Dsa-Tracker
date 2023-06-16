@@ -19,14 +19,14 @@ function Navbar({mode,setmode}) {
        {/* <Router>
        <Routes>
         <Route> */}
-               <Link className='pl-2 font-large' to="/"  > Dsa tracker </Link>
+               <Link className='pl-2 font-large   ' to="/"  > Dsa tracker </Link>
        {/* </Route>
        </Routes>
        </Router> */}
         
         </div>
- <div className='flex align-bottom text-base pr-3 ' onClick={ ()=>{console.log(hidden1);hidden1=="hidden"?sethidden1("visible"):sethidden1("hidden")}} >
-        <img className='w-8 h-9' src="bulb.png "></img>
+ <div className='flex align-bottom text-base pr-3 text-center  ' onClick={ ()=>{console.log(hidden1);hidden1=="hidden"?sethidden1("visible"):sethidden1("hidden")}} >
+        <img className='mt-1 w-8 h-9' src="bulb.png "></img>
         <div className='text-gray-200  text-right  m-2 h-8 ' >
            Hot Tip
         </div>
