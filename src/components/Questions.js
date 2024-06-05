@@ -114,7 +114,7 @@ return (
 qq.map((ele)=>{
         {
                 return (          
-    <tr className = { checkID(ele.ID)==true?"bg-green-400":ele.ID%2===0?"bg-fuchsia-100":"none"  }>
+    <tr className = { checkID(ele.ID)==true?"bg-green-400":ele.ID%2===0?"bg-cyan-100":"none"  }>
                     <td  className=' text-md  text-sky-700 font-medium   border-2 p-3 w-10'>
                     
                       { ele.ID[0]=='+'? handleID(ele.ID) : ele.ID }

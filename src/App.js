@@ -832,7 +832,7 @@ const [count, setcount] = useState(0);
 
           <Route
             exact
-            path="/Dynamic Programming"
+            path="/Dp"
             element={
               <Questions
                 Checked={Checked2}
@@ -840,7 +840,7 @@ const [count, setcount] = useState(0);
                 setChecked={setChecked2}
                 mode={mode}
                 qlist={dpq}
-                name="Dynamic Programming"
+                name="Dp"
               />
             }
           ></Route>

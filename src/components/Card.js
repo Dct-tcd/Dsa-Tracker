@@ -49,7 +49,7 @@ if (op!=null)
     }
 
   return (
-    <Link to={name}>
+    <Link to={name} className='w-[290px] lg:mx-8 lg:my-2 md:mx-6 md:my-1 '>
 
     { <div className={Math.round((ans*100)/qno)!=100  ? " flex items-center m-2 justify-between border-purple-300 shadow-lg  font-open-sans border-spacing-1.5  border-2 w-auto rounded-lg box-border p-8" :  " flex items-center m-2 justify-between border-purple-300 shadow-lg  font-open-sans border-spacing-1.5  border-2 w-auto rounded-lg box-border p-8  bg-green-100  " }>
       <img className='w-6 h-6  mr-3 mt-0 align-top' src="https://pluspng.com/img-png/react-logo-png-js-logo-react-react-js-icon-512x512.png"></img>
