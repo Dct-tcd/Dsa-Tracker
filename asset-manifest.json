@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dsa-Tracker/static/css/main.8e897cee.css",
+    "main.js": "/Dsa-Tracker/static/js/main.9e070eb9.js",
+    "static/js/787.30e13969.chunk.js": "/Dsa-Tracker/static/js/787.30e13969.chunk.js",
+    "index.html": "/Dsa-Tracker/index.html",
+    "main.8e897cee.css.map": "/Dsa-Tracker/static/css/main.8e897cee.css.map",
+    "main.9e070eb9.js.map": "/Dsa-Tracker/static/js/main.9e070eb9.js.map",
+    "787.30e13969.chunk.js.map": "/Dsa-Tracker/static/js/787.30e13969.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e897cee.css",
+    "static/js/main.9e070eb9.js"
+  ]
+}
