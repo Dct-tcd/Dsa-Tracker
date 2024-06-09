@@ -5,6 +5,12 @@ import Status from './Status';
 function Navbar({ mode, setmode }) {
 
   const [hidden1, sethidden1] = useState("hidden");
+
+  const handleVisi = () => {
+    // console.log(hidden1)
+    hidden1 == "hidden" ? sethidden1("visible") : sethidden1("hidden")
+  }
+
   const handleClick = () => {
     mode == "light" ? setmode("dark") : setmode("light");
   }
@@ -28,15 +34,15 @@ function Navbar({ mode, setmode }) {
         </div>
         <div>
           <div>
-            <button onClick={() => darkModeHandler()}> {
+            {/* <button onClick={() => darkModeHandler()}> {
 
               dark && <IoSunny />
             }
               {
                 !dark && <IoMoon />
-              }</button>
+              }</button> */}
           </div>
-          <div className='flex align-bottom text-base pr-3 text-center cursor-pointer ' onClick={() => { console.log(hidden1); hidden1 == "hidden" ? sethidden1("visible") : sethidden1("hidden") }} >
+          <div className='flex align-bottom text-base pr-3 text-center cursor-pointer ' onClick={handleVisi} >
             <img className='mt-1 w-8 h-9' src="bulb.png "></img>
             <div className='text-gray-200  text-right  m-2 h-8' >
               Hot Tip
@@ -45,7 +51,7 @@ function Navbar({ mode, setmode }) {
         </div>
 
       </div>
-      <Status visi={hidden1} />
+      <Status visi={hidden1} handlevisi={handleVisi} />
     </div>
   )
 }
