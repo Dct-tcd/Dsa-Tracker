@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# DSA Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to DSA Tracker, a React-based application designed to help developers practice and master 100 Data Structures and Algorithms (DSA) questions to crack product-based company interviews. Built with [Create React App](https://create-react-app.dev/), this tool provides an interactive platform to track progress across various DSA topics.
+
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Learn More](#learn-more)
+
+## Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) (v6 or higher)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Dct-tcd/Dsa-Tracker.git
+   cd Dsa-Tracker
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
 ## Available Scripts
-
 In the project directory, you can run:
 
-### `npm start`
+- `npm start`: Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it. The page will reload on changes, and lint errors will appear in the console.
+- `npm test`: Launches the test runner in interactive watch mode. See the [testing section](#learn-more) for more details.
+- `npm run build`: Builds the app for production in the `build` folder. The build is minified and optimized for performance.
+- `npm run eject`: Exposes configuration files (one-way operation, cannot be undone). Use this for full control over build tools.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+- Track progress on 100 DSA questions across topics like Arrays, Strings, Linked Lists, Binary Trees, and more.
+- Categorize questions by topic with total and unstarted question counts.
+- Interactive interface to mark questions as "Done" or "Not Yet Started."
+- Topic-wise breakdown for focused practice.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contributing
+We welcome contributions to enhance DSA Tracker! To get started:
+1. Check the [issue tracker](https://github.com/your-username/DSA-Tracker-by-De/issues) for open tasks.
+2. Fork the repository and create a branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Make changes, test locally, and commit:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to your fork and submit a pull request.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Please review any existing `CONTRIBUTING.md` or ask the maintainers for specific guidelines.
 
 ## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Create React App Documentation](https://create-react-app.dev/)
+- [React Documentation](https://reactjs.org/)
+- [Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Deployment](https://facebook.github.io/create-react-app/docs/deployment)
